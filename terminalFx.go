@@ -1,4 +1,4 @@
-// customErrors
+// customError
 // Written by J.F. Gratton <jean-francois@famillegratton.net>
 // Original filename: customErrors/terminalFx.go
 // Original timestamp: 2024/03/30 14:51
