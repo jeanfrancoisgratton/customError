@@ -4,7 +4,7 @@ A simple extension on the Error() interface. That provides output in yellow (war
 
 # *__IMPORTANT NOTE__*
 ___
-This github repo is aread-only copy of the actual *source of truth* repo. The source repo is outside of github, and is the one where all Pull Requests and merges happen.
+This github repo is a read-only copy of the actual *source of truth* repo. The source repo is outside of github, and is the one where all Pull Requests and merges happen.
 
 If you need changes, please fill an issue in the issues tab of the repo with what needs to be corrected, or better yet, include a patch to whichever files need changes.
 

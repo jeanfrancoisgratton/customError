@@ -1,6 +1,6 @@
 // customError
 // Written by J.F. Gratton <jean-francois@famillegratton.net>
-// Original filename: customErrors/terminalFx.go
+// Original filename: customError/terminalFx.go
 // Original timestamp: 2024/03/30 14:51
 
 package customError
@@ -30,4 +30,8 @@ func Yellow(sentence string) string {
 
 func Blue(sentence string) string {
 	return fmt.Sprintf("%s", gchalk.WithBrightBlue().Bold(sentence))
+}
+
+func ClearTerminal() {
+	fmt.Print("\033[2J\033[H") // ANSI escape code for clearing the terminal
 }

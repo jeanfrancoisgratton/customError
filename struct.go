@@ -22,9 +22,10 @@ type CustomError struct {
 	Code     int           // optional
 }
 
+// This is the main function, really
 func (e CustomError) Error() string {
 	if e.Message == "" {
-		e.Message = "Unspecified errir"
+		e.Message = "Unspecified error"
 	}
 	switch e.Fatality {
 	case ErrortypeIota(Fatal):

@@ -11,4 +11,4 @@ if [ "$#" -gt 0 ]; then
 fi
 
 cd debug
-sudo ${GOROOT}/bin/go build -o ${OUTPUT}/buildTestCustomErrors .
+go build -o ${OUTPUT}/CustomErrorsTEST .
