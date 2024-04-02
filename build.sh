@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 GOROOT=/opt/go
-OUTPUT=/opt/bin
+OUTPUT=/opt/tests/
 
 #arch=$(uname -m)
 
@@ -11,4 +11,4 @@ if [ "$#" -gt 0 ]; then
 fi
 
 cd debug
-go build -o ${OUTPUT}/CustomErrorsTEST .
+go build -o ${OUTPUT}/CustomError .
