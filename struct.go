@@ -16,10 +16,11 @@ const (
 
 // This is the main data type.
 type CustomError struct {
-	Fatality ErrortypeIota // if omitted, we will use "Undefined, and will throw a panic() right away, so... define it :)
-	Title    string        // optional
-	Message  string        // if omitted, "Unspecified error" will be used
-	Code     int           // optional
+	Fatality       ErrortypeIota // optional, if omitted, we will use "Undefined, and will throw a panic() right away, so... define it :)
+	Title          string        // optional
+	Message        string        // optional, if omitted, "Unspecified error" will be used
+	Code           int           // optional
+	ColouredOutput bool          // unused for now
 }
 
 // This is the main function, really
@@ -38,4 +39,15 @@ func (e CustomError) Error() string {
 		e.Unknown()
 	}
 	return ""
+}
+
+// THIS IS A CONSTRUCTOR STUB !!!
+// UNUSED FOR NOW
+// CustomError constructor :
+// For now, we only need to ensure that the "ColouredOuput" struct member is initialized, that is, passed in parameters
+
+func NewCustomError(colouredOutput bool) CustomError {
+	// for now, not doing anything
+
+	return CustomError{}
 }
