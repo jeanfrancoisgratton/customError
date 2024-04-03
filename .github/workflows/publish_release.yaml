@@ -41,7 +41,7 @@ jobs:
       - name: Get Release Notes
         id: release_notes
         run: |
-          echo "::set-output name=notes::$(cat path/to/release_notes.md)"
+          echo "::set-output name=notes::$(cat docs/RELEASE_NOTES.md)"
 
       - name: Create Release
         id: create_release
