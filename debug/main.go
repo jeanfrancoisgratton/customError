@@ -12,8 +12,7 @@
 // WARNING  WARNING  WARNING  WARNING  WARNING
 // ===========================================
 
-package main
-
+//package main
 //
 //import (
 //	"fmt"
