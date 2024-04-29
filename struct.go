@@ -30,7 +30,7 @@ func (e CustomError) Error() string {
 	}
 	switch e.Fatality {
 	case ErrortypeIota(Fatal):
-		return e.Fatal()
+		e.Fatal()
 	case ErrortypeIota(Warning):
 		return e.Warning()
 	case ErrortypeIota(Continuable):

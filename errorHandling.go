@@ -2,13 +2,14 @@ package customError
 
 import (
 	"fmt"
+	"os"
 	"strconv"
 )
 
 // This is how a FATAL error message is displayed, with various scenarios:
 // - with or without a Title
 // - with or without an error code
-func (e CustomError) Fatal() string {
+func (e CustomError) Fatal() {
 	builtString := ""
 	if e.Title != "" {
 		// with Title and Code
@@ -29,7 +30,8 @@ func (e CustomError) Fatal() string {
 			builtString = fmt.Sprintf("%s\n", Red(e.Message))
 		}
 	}
-	return builtString
+	fmt.Println(builtString)
+	os.Exit(e.Code)
 }
 
 func (e CustomError) Warning() string {
