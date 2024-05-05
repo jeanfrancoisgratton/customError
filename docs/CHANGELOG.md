@@ -1,5 +1,7 @@
 | Release | Date       | Comments                                                                                                  |
 |---------|------------|-----------------------------------------------------------------------------------------------------------|
+| 1.7.0   | 2024.05.05 | Fatal error is now the default error type                                                                 |
+| 1.6.7   | 2024.05.02 | Type assertion failures are handled within the package                                                    |
 | 1.6.6   | 2024.04.29 | a fatal error will now halt the program, as it should                                                     |
 | 1.6.5   | 2024.04.03 | Getting ready for param initialization with a (so far, empty) constructor                                 |
 | 1.5.1   | 2024.04.03 | Fixed gh action                                                                                           |

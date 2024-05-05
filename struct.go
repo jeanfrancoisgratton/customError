@@ -3,20 +3,19 @@ package customError
 // CustomError implements the error interface
 // This will eventually be expanded
 
-// The ErrortypeIota and the following constant are used to determine what kind of errors
-// is CustomError able to manage
+// The ErrortypeIota and the following constant is used to determine what kind of error we deal with
 type ErrortypeIota int
 
 const (
-	Undefined ErrortypeIota = iota
-	Fatal
+	Fatal ErrortypeIota = iota
 	Warning
 	Continuable
+	Undefined
 )
 
 // This is the main data type.
 type CustomError struct {
-	Fatality       ErrortypeIota // optional, if omitted, we will use "Undefined, and will throw a panic() right away, so... define it :)
+	Fatality       ErrortypeIota // optional, if omitted, we will use "Fatal"; "Undefined" will throw a panic right away
 	Title          string        // optional
 	Message        string        // optional, if omitted, "Unspecified error" will be used
 	Code           int           // optional
