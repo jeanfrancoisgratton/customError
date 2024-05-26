@@ -82,6 +82,7 @@ func (e CustomError) Continuable() string {
 	return builtString
 }
 
+// We do not care for Title, here...
 func (e CustomError) Unknown() string {
 	panic(fmt.Sprintf("\n\n%s\n", e.Message))
 }

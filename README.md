@@ -18,10 +18,10 @@ We have this very simple (... for now) structure and its dependencies. I expect 
 type ErrortypeIota int
 
 const (
-	Undefined ErrortypeIota = iota
-	Fatal
+	Fatal  ErrortypeIota = iota
 	Warning
 	Continuable
+	Undefined
 )
 
 type CustomError struct {
@@ -32,13 +32,15 @@ type CustomError struct {
 }
 ```
 
+Having Fatal defined as the first iota (thus value == 0) means that every time we define a CustomError struct and omit Fatality, we'll deal with a fatal error.
+
 If you wish to customize an error message that would otherwise be plain, or just _meh_, you just need to populate a variable of the above struct type with the proper members, and use $YOUR_VAR_NAME.Error().
 More on that later on.
 
 
 ### Struct members
 
-- Of the above structure, what is important here is the `Fatality` member from the CustomError struct. It is from there that we decide of the colors used in the output.
+- Of the above structure, what is important here is the `Fatality` member from the CustomError struct. It is from there that we decide of the colors used in the output, and whether this is enough to completely halt the software. As it is, a Fatal error halts the software, and un Undefined error throws a panic().
 
 When this member is not explicitely initialized, it assumes the value of "Undefined", and will throw, eventually a panic() and stops the software. Otherwise, this is the value that determines which colors are used to display the error message.
 

@@ -10,7 +10,7 @@ const (
 	Fatal ErrortypeIota = iota
 	Warning
 	Continuable
-	Undefined
+	Undefined // Title is disregarded, we only use Message here
 )
 
 // This is the main data type.
