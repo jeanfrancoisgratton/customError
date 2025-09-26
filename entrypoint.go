@@ -26,15 +26,6 @@ func (f ErrortypeIota) String() string {
 	}
 }
 
-// This is the main data type.
-type CustomError struct {
-	Fatality       ErrortypeIota // optional, if omitted, we will use "Fatal"; "Undefined" will throw a panic right away
-	Title          string        // optional
-	Message        string        // optional, if omitted, "Unspecified error" will be used
-	Code           int           // optional
-	NoColourOutput bool          // handles if we use colours in output (useless in logfiles)
-}
-
 // ErrorNoColor is a helper function that actually calls Error(), while enforcing NoColourOutput = true
 func (e CustomError) ErrorNoColor() string {
 	e.NoColourOutput = true

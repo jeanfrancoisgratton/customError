@@ -1,6 +1,6 @@
-module github.com/jeanfrancoisgratton/customError/v2
+module github.com/jeanfrancoisgratton/customError/v3
 
-go 1.25.0
+go 1.25.1
 
 require github.com/jwalton/gchalk v1.3.0
 
