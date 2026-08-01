@@ -1,5 +1,7 @@
 | Release | Date       | Comments                                                                                                                          |
 |---------|------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| 3.1.0   | 2026.07.31 | New output helpers: Fprint(), Print() and Die(), writing to stderr rather than stdout<br>Colour is dropped automatically when the output is not a terminal<br>PosixErrorCode is now actually used, through ExitCode() |
+| 3.0.0   | 2025.09.26 | Module path bump to `/v3`<br>New `PosixErrorCode` struct member: error codes above 128 are not well handled in POSIX, this allows mapping to a code fit to be returned by os.Exit()<br>The CustomError struct moved out of entrypoint.go into its own types.go<br>Dropped build.sh<br>GO version bump to 1.25.1 |
 | 2.3.3   | 2025.08.25 | Removed extra newline + `:` at the end of the Error() output                                                                      |
 | 2.3.2   | 2025.08.14 | Fixed issue where Fatal() is not properly returning its string value                                                              |                                                            
 | 2.3.1   | 2025.08.14 | New helper wrapper, ErrorNoColor() to handle NoColour as simply as possible from the caller software<br>GO version bump to 1.25.0 |
