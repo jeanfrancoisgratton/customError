@@ -36,6 +36,8 @@ func (e CustomError) Error() string {
 		return e.Warning()
 	case ErrortypeIota(Continuable):
 		return e.Continuable()
+	case ErrortypeIota(NotAnError):
+		return e.NotAnError()
 	default:
 		e.Unknown()
 	}

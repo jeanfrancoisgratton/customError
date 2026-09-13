@@ -75,7 +75,30 @@ func (e CustomError) Continuable() string {
 	return builtString
 }
 
+func (e CustomError) NotAnError() string {
+	builtString := ""
+	if e.Title != "" {
+		// with Title and Code
+		if e.Code != 0 {
+			builtString = fmt.Sprintf("%s: (error code: %v) -> %s", e.Title, e.Code, e.Message)
+		} else {
+			// With Title, no Code
+			builtString = e.Title + ": " + e.Message
+		}
+	} else {
+		// No title, with code
+		if e.Code != 0 {
+			builtString = fmt.Sprintf("%s: (error code: %v", e.Message, e.Code)
+		} else {
+			// No title, no code
+			builtString = e.Message
+		}
+	}
+	return builtString + "\n"
+}
+
 // We do not care for Title, here...
+
 func (e CustomError) Unknown() string {
 	panic(fmt.Sprintf("\n\n%s\n", e.Message))
 }
