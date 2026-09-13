@@ -1,6 +1,7 @@
 # Migrating callers to v3.1.0 reporting
-
+___
 ## TL;DR
+
 
 v3.1.0 is **strictly additive**. Bumping the dependency changes nothing at runtime and fixes nothing by itself. The old idiom still compiles, and neither the compiler nor `go vet` will flag it. Every call site has to be edited by hand.
 

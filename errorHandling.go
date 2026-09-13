@@ -8,6 +8,7 @@ import (
 // This is how a FATAL error message is displayed, with various scenarios:
 // - with or without a Title
 // - with or without an error code
+
 func (e CustomError) Fatal() string {
 	builtString := ""
 	if e.Title != "" {

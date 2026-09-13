@@ -3,16 +3,6 @@ package customError
 // CustomError implements the error interface
 // This will eventually be expanded
 
-// The ErrortypeIota and the following constant is used to determine what kind of error we deal with
-type ErrortypeIota int
-
-const (
-	Fatal ErrortypeIota = iota
-	Warning
-	Continuable
-	Undefined // Title is disregarded, we only use Message here
-)
-
 func (f ErrortypeIota) String() string {
 	switch f {
 	case Fatal:
@@ -21,6 +11,8 @@ func (f ErrortypeIota) String() string {
 		return "Warning"
 	case Continuable:
 		return "Non-fatal"
+	case NotAnError:
+		return "Not an Error"
 	default:
 		return "Undefined"
 	}
